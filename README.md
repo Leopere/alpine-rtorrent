@@ -29,7 +29,9 @@ Incomplete but mostly-functional.
 #### Container Build Health
 [![Docker Pulls](https://img.shields.io/docker/pulls/chamunks/alpine-rtorrent.svg?style=flat-square)](https://registry.hub.docker.com/u/chamunks/alpine-rtorrent/)
 [![Docker Stars](https://img.shields.io/docker/stars/chamunks/alpine-rtorrent.svg?style=flat-square)](https://registry.hub.docker.com/u/chamunks/alpine-rtorrent/)
+
 Badge broken searching for alternative.
+
 [![Docker Build Status](http://hubstatus.container42.com/chamunks/alpine-rtorrent)](https://registry.hub.docker.com/u/chamunks/alpine-rtorrent)
 
 #### Repository Statistics/Info
