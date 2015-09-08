@@ -1,6 +1,6 @@
 # About rtorrent container
 `Complexity is the enemy of security`
-This container is intended to just be a simple probably poorly made OpenSSH-Server running on the ultra minimalistic [Alpine Linux](https://www.alpinelinux.org/) [Container](https://registry.hub.docker.com/_/alpine/) for the sake of sticking to docker standards and application separation. Containers are not intended to have more than one process/service running at a time for security purposes I've isolated this container as thinly as possible to help keep outward facing processes separate from internal ones.
+This container is intended to just be a simple rtorrent server running on the ultra minimalistic [Alpine Linux](https://www.alpinelinux.org/) [Container](https://registry.hub.docker.com/_/alpine/) for the sake of sticking to docker standards and application separation. Containers are not intended to have more than one process/service running at a time for security purposes I've isolated this container as thinly as possible to help keep outward facing processes separate from internal ones.
 
 `Why wouldn't I just include SSH in my container?`
 
