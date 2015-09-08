@@ -7,6 +7,6 @@ MAINTAINER Chamunks <Chamunks@gmail.com>
 RUN apk add --update rtorrent
 COPY rtorrent.rc ~/rtorrent.rc
 EXPOSE 22
-#VOLUME ["/root/.ssh/authorized_keys", "/etc/ssh/sshd_config"]
+VOLUME ["/data/complete", "/data/incomplete", "/data/watch", "/data/added"]
 ENTRYPOINT  ["/bin/sh"]
 CMD  ["rtorrent"]
