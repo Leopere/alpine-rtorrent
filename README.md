@@ -13,14 +13,30 @@ Yes it can but with docker-compose.yml files you can easily launch a complex int
 
 Every RUN directive creates another layer in your container which makes your container much larger than it needs to be.  Meaning if you do any package or archive cleanup after you've installed a bunch of things you're not actually saving any space.
 
+## Usage
+This image is absolutely bare bones it includes no GUI or WebGUI. To start and stop seeds/downloads requires the presence of .torrent files located in the ./torrents/ directory which is created in the repository directory on first launch.
+
+#### Start
+    docker-compose up -d
+
+#### Stop
+
+    docker-compose stop
+
+#### Remove
+
+    docker-compose rm
+
+You're not required to use the docker-compose.yml but its just a simple and pretty method to deliver a clean method to launch the application.  
+
 ## Current Status
 Incomplete but mostly-functional.
 
 ## ToDo
-- Launch rtorrent at container launch.
+- ~~Launch rtorrent at container launch.~~
 - Decide what I wan't to use as a remote interface that wont make choices for you.
-- Write some usage examples into README.md
-- Add license
+- ~~Write some usage examples into README.md~~
+- ~~Add license~~
 
 ## Health & Statistics
 #### Repository Health
