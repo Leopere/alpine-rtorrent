@@ -19,6 +19,8 @@ Incomplete but mostly-functional.
 ## ToDo
 - Launch rtorrent at container launch.
 - Decide what I wan't to use as a remote interface that wont make choices for you.
+- Write some usage examples into README.md
+- Add license
 
 ## Health & Statistics
 #### Repository Health
