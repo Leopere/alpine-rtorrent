@@ -1,0 +1,8 @@
+rtorrent:
+  image: "chamunks/alpine-rtorrent:latest"
+  volumes:
+    - "./downloads/:/data/downloads/"
+    - "./torrents/:/data/torrents/"
+  expose:
+    - "6881"
+    - "49264"

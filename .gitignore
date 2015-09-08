@@ -1,1 +1,3 @@
-rtorrent.rc
+#rtorrent.rc
+downloads/*
+torrents/*
