@@ -4,7 +4,8 @@
 FROM alpine:edge
 MAINTAINER Chamunks <Chamunks@gmail.com>
 ## Prepare ##
-RUN apk add --update rtorrent
+RUN apk add --update rtorrent && \
+    mkdir ~/session
 COPY rtorrent.rc ~/.rtorrent.rc
 # Port 49164 is opening incoming connections from other peers.
 # Port 6881 is the DHT port if you wish to use it.
