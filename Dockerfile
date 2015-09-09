@@ -11,5 +11,5 @@ COPY rtorrent.rc ~/.rtorrent.rc
 EXPOSE 49164 6881
 # These volumes are mostly optional it depends on how you want to run your container.
 VOLUME ["/data/complete", "/data/incomplete", "/data/watch", "/data/added", "/data/downloads", "/data/torrents"]
-ENTRYPOINT  ["rtorrent"]
-#CMD  ["rtorrent"]
+#ENTRYPOINT  ["rtorrent"]
+CMD  ["rtorrent"]
