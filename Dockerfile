@@ -4,7 +4,7 @@
 FROM alpine:edge
 MAINTAINER Chamunks <Chamunks@gmail.com>
 ## Prepare ##
-RUN apk add --update rtorrent && \
+RUN apk add --no-cache rtorrent && \
     mkdir ~/session
 COPY rtorrent.rc ~/.rtorrent.rc
 # Port 49164 is opening incoming connections from other peers.
