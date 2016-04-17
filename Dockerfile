@@ -5,7 +5,9 @@ FROM alpine:3.3
 MAINTAINER Chamunks <Chamunks@gmail.com>
 ## Prepare ##
 RUN apk add --no-cache rtorrent screen
-RUN adduser -D rtorrent
+RUN adduser -D rtorrent && \
+    mkdir -p "/data/complete" "/data/incomplete" "/data/watch" "/data/added" "/data/downloads" "/data/torrents" && \
+    chown -R rtorrent:rtorrent "/data"
 USER rtorrent
 WORKDIR "/home/rtorrent"
 COPY rtorrent.rc "./.rtorrent.rc"
