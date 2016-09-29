@@ -6,3 +6,5 @@ rtorrent:
   expose:
     - "6881"
     - "49264"
+stdin_open: false
+tty: false
