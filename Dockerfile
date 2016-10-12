@@ -1,16 +1,21 @@
 ##########################
 ## Alpine based OPENSSH ##
 ##########################
-FROM alpine:edge
+FROM alpine:3.3
 MAINTAINER Chamunks <Chamunks@gmail.com>
 ## Prepare ##
-RUN apk add --update rtorrent && \
-    mkdir ~/session
-COPY rtorrent.rc ~/.rtorrent.rc
+RUN apk add --no-cache rtorrent screen
+RUN adduser -D rtorrent && \
+    mkdir -p "/data/complete" "/data/incomplete" "/data/watch" "/data/added" "/data/downloads" "/data/torrents" && \
+    chown -R rtorrent:rtorrent "/data"
+USER rtorrent
+WORKDIR "/home/rtorrent"
+COPY rtorrent.rc "./.rtorrent.rc"
+RUN mkdir "./session"
 # Port 49164 is opening incoming connections from other peers.
 # Port 6881 is the DHT port if you wish to use it.
 EXPOSE 49164 6881
 # These volumes are mostly optional it depends on how you want to run your container.
 VOLUME ["/data/complete", "/data/incomplete", "/data/watch", "/data/added", "/data/downloads", "/data/torrents"]
 #ENTRYPOINT  ["rtorrent"]
-CMD  ["rtorrent"]
+CMD ["/usr/bin/screen", "-d", "-m", "-fa", "-S", "rtorrent", "/usr/bin/rtorrent"]
